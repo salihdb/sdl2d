@@ -1,5 +1,6 @@
+# sdl2D (D dili ilintisi)
 
-
+Package sdl provides bindings for the [SDL][] library, version 2.2.0
 The project's [source code][] and [documentation][] are released into the
 [public domain][].
 
@@ -61,3 +62,19 @@ Current status of the [API, sorted by category][]:
 
     * Total progress                :  63% (
 [API, sorted by category]: http://wiki.libsdl.org/moin.cgi/APIByCategory
+
+Installation and Testing
+------------------------
+
+To install all of the relevant libraries, use the following:
+
+    hg clone http://hg.libsdl.org/SDL
+    mkdir SDL/build
+    cd SDL/build
+    ../configure
+    sudo make install
+    export LD_LIBRARY_PATH=/usr/local/lib
+    cd ..
+    git clone https://github.com/salihdb/sdl2d
+    dmd sdl2d/test sdl2d/events sdl2d/surface -L-lSDL2 -release 
+    ./test
